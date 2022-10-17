@@ -1,0 +1,70 @@
+<?php
+
+$nameError="";
+$dobError="";
+$addressError="";
+$mobileError="";
+$emailError="";
+
+
+if(isset($_REQUEST["submit"])){
+
+
+    if(empty($_REQUEST["name"]>5)){
+        $nameError="NAME BOX IS EMPTY";
+
+    }
+    else{
+        
+        $nameError="NAME IS:".$_REQUEST["name"];
+    }
+
+    if(empty($_REQUEST["dob"]>10)){
+        $addressError="DATE OF BIRTH BOX IS EMPTY";
+
+    }
+    else{
+        $addressError="DATE OF BIRTH IS:".$_REQUEST["dob"];
+    }
+
+
+    if(empty($_REQUEST["address"]>10)){
+        $addressError="ADDRESS BOX IS EMPTY";
+
+    }
+    else{
+        $addressError="ADDRESS IS:".$_REQUEST["address"];
+    }
+
+
+
+
+    if(empty($_REQUEST["mobile"])){
+        $mobileError="MOBILE NUMBER BOX IS EMPTY";
+
+    }
+    else{
+        $mobileError="MOBILE NUMBER IS:".$_REQUEST["mobile"];
+    }
+
+
+
+    if(empty($_REQUEST["email"])){
+        $emailError="EMAIL IS EMPTY";
+
+    }
+    else{
+        $emailError="EMAIL IS:".$_REQUEST["email"];
+    }
+
+
+
+   
+
+
+
+}
+
+
+
+?>
